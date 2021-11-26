@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(to top left, #ffbf86, #ff9b6a);
+}
+
+.container {
+  height: 755px;
+  margin: 0 25px;
+}
+.container h1,
+.container p,
+.container .reset {
+  text-align: center;
+  color: #3f3351;
+}
+.container h1 {
+  margin: 2em 0 0.5em 0;
+}
+.container p {
+  margin-bottom: 1em;
+}
+.container .reset {
+  margin-bottom: 1.5em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.container .box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .box-wrapper .calculator {
+  height: 600px;
+  width: 450px;
+  background-color: #cee5d0;
+  border-radius: 15px;
+  box-shadow: 5px 6px #d06224;
+}
+.container .box-wrapper .calculator .viewer {
+  height: 95px;
+  padding: 25px;
+  background-color: #f3f0d7;
+  font-size: 32px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #181D31;
+}
+.container .box-wrapper .calculator .clear-wrapper {
+  background-color: #cee5d0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 6em;
+  border-top-right-radius: 10px;
+}
+.container .box-wrapper .calculator .clear {
+  background: none;
+  border: none;
+  cursor: pointer;
+  float: left;
+  font-size: 28px;
+}
+.container .box-wrapper .calculator .clear:active {
+  color: #998ceb;
+}
+.container .box-wrapper .calculator .numpad {
+  text-align: center;
+}
+.container .box-wrapper .calculator .numpad button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  margin: 25px;
+  padding: 15px;
+}
+.container .box-wrapper .calculator .numpad button:active {
+  color: #998ceb;
+}
+.container .box-wrapper .calculator .numpad buttonfocus {
+  border: none;
+  outline: none;
+}
+.container .box-wrapper .calculator .broken {
+  animation: broken 2s;
+  transform: translate3d(0, -2000px, 0);
+  opacity: 0;
+}
+
+@keyframes broken {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  5% {
+    transform: rotate(5deg);
+  }
+  15% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  70% {
+    transform: translate3d(0, 2000px, 0);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
