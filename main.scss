@@ -1,0 +1,146 @@
+$bgColor1: #ffbf86;
+$bgColor2: #ff9b6a;
+$fontColor: #3f3351;
+$bgCalculator: #cee5d0;
+$bgViewerCalculator: #f3f0d7;
+$bgShadow: #d06224;
+$btnActive: #998ceb;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(to top left, $bgColor1, $bgColor2);
+}
+
+.container {
+  height: 705px;
+  margin: 0 25px;
+  h1,
+  p, 
+  .reset {
+    text-align: center;
+    color: $fontColor;
+  }
+  h1 {
+    margin: 2em 0 0.5em 0;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  .reset {
+     margin-bottom: 1.5em;
+     text-decoration: underline;
+     cursor: pointer;
+  }
+  .box-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .calculator {
+      height: 600px;
+      width: 450px;
+      background-color: $bgCalculator;
+      border-radius: 15px;
+      box-shadow: 5px 6px $bgShadow;
+      .viewer {
+         height: 95px;
+         padding: 25px;
+         background-color: $bgViewerCalculator;
+         font-size: 32px;
+         display: flex;
+         justify-content: flex-end;
+         align-items: flex-end;
+         border-top-left-radius: 15px;
+         border-top-right-radius: 15px;
+         color: #181D31;
+      }
+      .clear-wrapper {
+         background-color: $bgCalculator;
+         width: 50px;
+         height: 50px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: absolute;
+         margin-top: 6em;
+         border-top-right-radius: 10px;
+      }
+      .clear {
+         background: none;
+         border: none;
+         cursor: pointer;
+         float: left;
+         font-size: 28px;
+         &:active {
+            color: $btnActive;
+         }
+      }
+      .numpad {
+         text-align: center;
+         button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 28px;
+            margin: 25px;
+            padding: 15px;
+            &:active {
+               color: $btnActive;
+            }
+            &focus {
+               border: none;
+               outline: none;
+            }
+         }
+      }
+      .broken {
+         animation: broken 2s;
+         transform: translate3d(0, -2000px, 0);
+         opacity: 0;
+      }
+    }
+  }
+}
+
+@keyframes broken {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  5% {
+    transform: rotate(5deg);
+  }
+
+  15% {
+    transform: rotate(-5deg);
+  }
+
+  20% {
+    transform: rotate(5deg);
+  }
+
+  25% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(45deg);
+  }
+
+  70% {
+    transform: translate3d(0, 2000px, 0);
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(0, -2000px, 0);
+  }
+}
